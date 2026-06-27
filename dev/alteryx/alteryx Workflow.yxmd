@@ -1,0 +1,603 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2024.1" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">D:\Level 4\Semester 2\Data warehouse\Section\dataset_parts\alteryx_half.xlsx|||`Sheet1$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>alteryx_half.xlsx
+Query=`Sheet1$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="brokered_by" size="255" source="File: D:\Level 4\Semester 2\Data warehouse\Section\dataset_parts\alteryx_half.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="status" size="255" source="File: D:\Level 4\Semester 2\Data warehouse\Section\dataset_parts\alteryx_half.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="price" size="255" source="File: D:\Level 4\Semester 2\Data warehouse\Section\dataset_parts\alteryx_half.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="bed" size="255" source="File: D:\Level 4\Semester 2\Data warehouse\Section\dataset_parts\alteryx_half.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="bath" size="255" source="File: D:\Level 4\Semester 2\Data warehouse\Section\dataset_parts\alteryx_half.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="acre_lot" size="255" source="File: D:\Level 4\Semester 2\Data warehouse\Section\dataset_parts\alteryx_half.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="street" size="255" source="File: D:\Level 4\Semester 2\Data warehouse\Section\dataset_parts\alteryx_half.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="city" size="255" source="File: D:\Level 4\Semester 2\Data warehouse\Section\dataset_parts\alteryx_half.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="state" size="255" source="File: D:\Level 4\Semester 2\Data warehouse\Section\dataset_parts\alteryx_half.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="zip_code" size="255" source="File: D:\Level 4\Semester 2\Data warehouse\Section\dataset_parts\alteryx_half.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="house_size" size="255" source="File: D:\Level 4\Semester 2\Data warehouse\Section\dataset_parts\alteryx_half.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="prev_sold_date" size="255" source="File: D:\Level 4\Semester 2\Data warehouse\Section\dataset_parts\alteryx_half.xlsx|||`Sheet1$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="258" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="brokered_by" selected="True" rename="Broker_ID" type="Float" size="4" />
+            <SelectField field="status" selected="True" rename="Property_Status" type="V_WString" size="2147483647" />
+            <SelectField field="price" selected="True" rename="Price" type="Float" size="4" />
+            <SelectField field="bed" selected="True" rename="Bedrooms" type="Int32" size="4" />
+            <SelectField field="bath" selected="True" rename="Bathrooms" type="Int32" size="4" />
+            <SelectField field="acre_lot" selected="True" rename="Lot_Size_Acres" type="Float" size="4" />
+            <SelectField field="street" selected="True" rename="Street_Number" type="V_WString" size="2147483647" />
+            <SelectField field="city" selected="True" rename="City" type="V_WString" size="2147483647" />
+            <SelectField field="state" selected="True" rename="State" type="V_WString" size="2147483647" />
+            <SelectField field="zip_code" selected="True" rename="Zip_Code" type="V_WString" size="2147483647" />
+            <SelectField field="house_size" selected="True" rename="House_Size_Sqft" type="Float" size="4" />
+            <SelectField field="prev_sold_date" selected="True" rename="Sale_Date" type="V_WString" size="2147483647" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings>
+        <Position x="378" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">True</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"Street_Number","Sale_Date"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="558" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Lot_Size_Acres" action="Avg" rename="Avg_Lot_Size_Acres" />
+            <SummarizeField field="Price" action="Avg" rename="Avg_Price" />
+            <SummarizeField field="House_Size_Sqft" action="Avg" rename="Avg_House_Size_Sqft" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="558" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Bedrooms" action="Mode" rename="Mode_Bedrooms" />
+            <SummarizeField field="Bathrooms" action="Mode" rename="Mode_Bathrooms" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="546" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF IsNull([Price]) THEN 476668.585335799 ELSE [Price] ENDIF" field="Price" size="4" type="Float" enabled="true" />
+            <FormulaField expression="IF IsNull([Bedrooms]) THEN 3 ELSE [Bedrooms] ENDIF" field="Bedrooms" size="4" type="Int32" enabled="true" />
+            <FormulaField expression="IF IsNull([Bathrooms]) THEN 2 ELSE [Bathrooms] ENDIF" field="Bathrooms" size="4" type="Int32" enabled="true" />
+            <FormulaField expression="IF IsNull([House_Size_Sqft]) THEN 2154.55934825471 ELSE [House_Size_Sqft] ENDIF" field="House_Size_Sqft" size="4" type="Float" enabled="true" />
+            <FormulaField expression="IF IsNull([Lot_Size_Acres]) THEN 15.0695869348756 ELSE [Lot_Size_Acres] ENDIF" field="Lot_Size_Acres" size="4" type="Float" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Price = IF IsNull([Price]) THEN 476668.585335799 ELSE [Price] ENDIF
+Bedrooms = I...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="690" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[!IsNull([Sale_Date]) AND [Sale_Date] != "" And !IsNull([Street_Number]) AND [Street_Number] != "" ]]></Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsNull([Sale_Date]) AND [Sale_Date] != "" And !IsNull([Street_Number]) AND [Str...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="834" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Price]&gt;1000000</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Price]&gt;1000000</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="942" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Uppercase(Left([City],1)) + Lowercase(Right([City], Length([City])-1))" field="City" size="1073741823" type="V_WString" enabled="true" />
+            <FormulaField expression="Uppercase(Left([Property_Status],1)) + Lowercase(Right([Property_Status], Length([Property_Status])-1))" field="Property_Status" size="1073741823" type="V_WString" enabled="true" />
+            <FormulaField expression="Replace([State], &quot; &quot;, &quot;_&quot;)" field="State" size="1073741823" type="V_WString" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>City = Uppercase(Left([City],1)) + Lowercase(Right([City], Length([City])-1))
+Pr...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1038" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeYear([Sale_Date])" field="Year" size="4" type="Int32" enabled="true" />
+            <FormulaField expression="DateTimeMonth([Sale_Date])" field="Month" size="4" type="Int32" enabled="true" />
+            <FormulaField expression="DateTimeDay([Sale_Date])" field="Day" size="4" type="Int32" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Year = DateTimeYear([Sale_Date])
+Month = DateTimeMonth([Sale_Date])
+Day = DateTi...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="1254" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>RecordID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1362" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="RecordID" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>RecordID - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="1374" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>NPercent</Mode>
+          <N>50</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>First 50% of rows</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="1482" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>NPercent</Mode>
+          <N>50</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>First 50% of rows</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1614" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="RecordID" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>RecordID - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1686" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="18">odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID="";Initial Catalog=RealEstateDW;Data Source=MALAK\SQLEXPRESS;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=MALAK;Initial File Name="";Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultiSubnetFailover=False;Use FMTONLY=False;Authentication="";TransparentNetworkIPResolution=True;Connect Retry Count=1;Connect Retry Interval=10|||Destination1</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <TransactionSize>0</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Delete</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Source=MALAK\SQLEXPRESS
+Catalog=RealEstateDW
+Query=Destination1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1866" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="18">odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID="";Initial Catalog=RealEstateDW;Data Source=MALAK\SQLEXPRESS;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=MALAK;Initial File Name="";Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultiSubnetFailover=False;Use FMTONLY=False;Authentication="";TransparentNetworkIPResolution=True;Connect Retry Count=1;Connect Retry Interval=10|||Destination2</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <TransactionSize>0</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Delete</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Source=MALAK\SQLEXPRESS
+Catalog=RealEstateDW
+Query=Destination2</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1554" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="acre_lot" selected="False" rename="Lot_Size_Acres" type="Float" size="4" />
+            <SelectField field="bath" selected="False" rename="Bathrooms" type="Int32" size="4" />
+            <SelectField field="bed" selected="False" rename="Bedrooms" type="Int32" size="4" />
+            <SelectField field="brokered_by" selected="False" rename="Broker_ID" type="Float" size="4" />
+            <SelectField field="house_size" selected="False" rename="House_Size_Sqft" type="Float" size="4" />
+            <SelectField field="prev_sold_date" selected="False" rename="Sale_Date" type="V_WString" size="2147483647" />
+            <SelectField field="status" selected="False" rename="Property_Status" type="V_WString" size="2147483647" />
+            <SelectField field="street" selected="False" rename="Street_Number" type="V_WString" size="2147483647" />
+            <SelectField field="Bathrooms" selected="True" />
+            <SelectField field="Bedrooms" selected="True" />
+            <SelectField field="Broker_ID" selected="True" />
+            <SelectField field="city" selected="True" rename="City" size="100" />
+            <SelectField field="Day" selected="True" />
+            <SelectField field="House_Size_Sqft" selected="True" />
+            <SelectField field="Lot_Size_Acres" selected="True" />
+            <SelectField field="Month" selected="True" />
+            <SelectField field="price" selected="True" rename="Price" />
+            <SelectField field="Property_Status" selected="True" size="100" />
+            <SelectField field="RecordID" selected="False" />
+            <SelectField field="Sale_Date" selected="True" type="Date" size="10" />
+            <SelectField field="state" selected="True" rename="State" size="50" />
+            <SelectField field="Street_Number" selected="True" size="100" />
+            <SelectField field="Year" selected="True" />
+            <SelectField field="zip_code" selected="True" rename="Zip_Code" size="20" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1758" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="acre_lot" selected="False" rename="Lot_Size_Acres" type="Float" size="4" />
+            <SelectField field="bath" selected="False" rename="Bathrooms" type="Int32" size="4" />
+            <SelectField field="bed" selected="False" rename="Bedrooms" type="Int32" size="4" />
+            <SelectField field="brokered_by" selected="False" rename="Broker_ID" type="Float" size="4" />
+            <SelectField field="house_size" selected="False" rename="House_Size_Sqft" type="Float" size="4" />
+            <SelectField field="prev_sold_date" selected="False" rename="Sale_Date" type="V_WString" size="2147483647" />
+            <SelectField field="status" selected="False" rename="Property_Status" type="V_WString" size="2147483647" />
+            <SelectField field="street" selected="False" rename="Street_Number" type="V_WString" size="2147483647" />
+            <SelectField field="Bathrooms" selected="True" />
+            <SelectField field="Bedrooms" selected="True" />
+            <SelectField field="Broker_ID" selected="True" />
+            <SelectField field="city" selected="True" rename="City" size="100" />
+            <SelectField field="Day" selected="True" />
+            <SelectField field="House_Size_Sqft" selected="True" />
+            <SelectField field="Lot_Size_Acres" selected="True" />
+            <SelectField field="Month" selected="True" />
+            <SelectField field="price" selected="True" rename="Price" />
+            <SelectField field="Property_Status" selected="True" size="100" />
+            <SelectField field="RecordID" selected="False" />
+            <SelectField field="Sale_Date" selected="True" type="Date" size="10" />
+            <SelectField field="state" selected="True" rename="State" size="50" />
+            <SelectField field="Street_Number" selected="True" size="100" />
+            <SelectField field="Year" selected="True" />
+            <SelectField field="zip_code" selected="True" rename="Zip_Code" size="20" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="7" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output26" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output26" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output26" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="True" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="True" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>alteryx Workflow</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="766292a9-f85d-40a3-a1f2-e1abfe0a0308" />
+      <Telemetry>
+        <PreviousWorkflowId value="4dfda763-d4e9-4352-9ff3-2e9e8dbf57d8" />
+        <OriginWorkflowId value="4dfda763-d4e9-4352-9ff3-2e9e8dbf57d8" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

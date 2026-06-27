@@ -1,0 +1,1 @@
+numer of rows from alteryx in des2 is 19100

@@ -1,0 +1,160 @@
+/*star_schema*/
+CREATE TABLE Dim_Property (
+    Property_ID INT IDENTITY PRIMARY KEY,
+    Property_Status NVARCHAR(100),
+    Bedrooms INT,
+    Bathrooms INT,
+    Lot_Size_Acres FLOAT,
+    House_Size_Sqft FLOAT,
+    Street_Number NVARCHAR(100),
+    City NVARCHAR(100),
+    State NVARCHAR(50),
+    Zip_Code NVARCHAR(20)
+);
+
+CREATE TABLE Dim_Date (
+    Date_ID INT IDENTITY PRIMARY KEY,
+    Sale_Date DATE,
+    Day INT,
+    Month INT,
+    Year INT
+);
+
+CREATE TABLE Fact_Property_Sales (
+    Sale_ID INT IDENTITY PRIMARY KEY,
+    Property_ID INT,
+    Date_ID INT,
+    Price FLOAT,
+
+    FOREIGN KEY (Property_ID) REFERENCES Dim_Property(Property_ID),
+    FOREIGN KEY (Date_ID) REFERENCES Dim_Date(Date_ID)
+);
+
+
+/*insert data*/
+INSERT INTO Dim_Property (
+    Property_Status,
+    Bedrooms,
+    Bathrooms,
+    Lot_Size_Acres,
+    House_Size_Sqft,
+    Street_Number,
+    City,
+    State,
+    Zip_Code
+)
+SELECT DISTINCT
+    Property_Status,
+    Bedrooms,
+    Bathrooms,
+    Lot_Size_Acres,
+    House_Size_Sqft,
+    Street_Number,
+    City,
+    State,
+    Zip_Code
+FROM Destination1;
+
+INSERT INTO Dim_Date (
+    Sale_Date,
+    Day,
+    Month,
+    Year
+)
+SELECT DISTINCT
+    Sale_Date,
+    Day,
+    Month,
+    Year
+FROM Destination1;
+
+
+INSERT INTO Fact_Property_Sales (Property_ID, Date_ID, Price)
+SELECT 
+    p.Property_ID,
+    d.Date_ID,
+    pd.Price
+FROM Destination1 pd
+
+JOIN Dim_Property p ON 
+    pd.Property_Status = p.Property_Status AND
+    pd.Bedrooms = p.Bedrooms AND
+    pd.Bathrooms = p.Bathrooms AND
+    pd.Lot_Size_Acres = p.Lot_Size_Acres AND
+    pd.House_Size_Sqft = p.House_Size_Sqft AND
+    pd.Street_Number = p.Street_Number AND
+    pd.City = p.City AND
+    pd.State = p.State AND
+    pd.Zip_Code = p.Zip_Code
+
+JOIN Dim_Date d ON
+    pd.Sale_Date = d.Sale_Date;
+
+
+SELECT * FROM Fact_Property_Sales;
+SELECT * FROM Dim_Property;
+SELECT * FROM Dim_Date;
+/*des2*/
+
+INSERT INTO Dim_Property (
+    Property_Status,
+    Bedrooms,
+    Bathrooms,
+    Lot_Size_Acres,
+    House_Size_Sqft,
+    Street_Number,
+    City,
+    State,
+    Zip_Code
+)
+SELECT DISTINCT
+    Property_Status,
+    Bedrooms,
+    Bathrooms,
+    Lot_Size_Acres,
+    House_Size_Sqft,
+    Street_Number,
+    City,
+    State,
+    Zip_Code
+FROM Destination1;
+
+INSERT INTO Dim_Date (
+    Sale_Date,
+    Day,
+    Month,
+    Year
+)
+SELECT DISTINCT
+    Sale_Date,
+    Day,
+    Month,
+    Year
+FROM Destination1;
+
+
+INSERT INTO Fact_Property_Sales (Property_ID, Date_ID, Price)
+SELECT 
+    p.Property_ID,
+    d.Date_ID,
+    pd.Price
+FROM Destination1 pd
+
+JOIN Dim_Property p ON 
+    pd.Property_Status = p.Property_Status AND
+    pd.Bedrooms = p.Bedrooms AND
+    pd.Bathrooms = p.Bathrooms AND
+    pd.Lot_Size_Acres = p.Lot_Size_Acres AND
+    pd.House_Size_Sqft = p.House_Size_Sqft AND
+    pd.Street_Number = p.Street_Number AND
+    pd.City = p.City AND
+    pd.State = p.State AND
+    pd.Zip_Code = p.Zip_Code
+
+JOIN Dim_Date d ON
+    pd.Sale_Date = d.Sale_Date;
+
+
+SELECT * FROM Fact_Property_Sales;
+SELECT * FROM Dim_Property;
+SELECT * FROM Dim_Date;
